@@ -232,6 +232,7 @@ i.fa-solid.fa-info {
     display:flex;
     flex-wrap: wrap;
     gap: 30px;
+}
 
 .hebergements-cards .card{
     display: flex;
