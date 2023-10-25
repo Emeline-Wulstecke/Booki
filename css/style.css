@@ -53,9 +53,8 @@ a {
 }
 
 .section-title {
-    margin: 0;
+    margin-top: 0;
     font-size: 22px;
-    gap: 30px;
 }
 
 .card {
@@ -164,7 +163,7 @@ button {
 /****** End Search bar ******/
 
 /****** Filter bar ******/
-.filter-bar, .filter-bar ul {
+.filters, .filters ul {
     display: flex;
     height: 50px;
     align-items: center;
@@ -172,12 +171,12 @@ button {
     font-weight: bold;
 }
 
-.filter-bar h2 {
+.filters h2 {
     font-size: 1.06rem;
     text-align: center;
 }
 
-.filter-bar li {
+.filters li {
     display: flex;
     padding: 10px 19px;
     align-items: center;
@@ -186,17 +185,17 @@ button {
     border: 2px solid var(--filter-bg-color);
 }
 
-.filter-bar li:hover {
+.filters li:hover {
   background-color: var(--filter-bg-color);
 }
 
-.filter-bar i.fa-solid {
+.filters i.fa-solid {
   margin-right: 10px;
   font-size: 22px;
 }
 /****** End Filter bar ******/
 
-.info-bar {
+.info {
     display: flex;
     height: 24px;
     align-items: center;
@@ -241,7 +240,7 @@ i.fa-solid.fa-info {
 }
 
 .hebergements a {
-    width: calc((100% - 90px)/3);
+    width: calc((100% - 60px) / 3);
 }
 
 .hebergements-cards img {
@@ -270,7 +269,12 @@ i.fa-solid.fa-info {
     margin-bottom: 5px;
 }
 
-
+.more {
+    display: flex;
+    width: 100%;
+    font-weight: bold;
+    gap: 30px;
+}
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -317,28 +321,31 @@ i.fa-solid.fa-info {
 }
 
 /*********** Activités *************/
+.activites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    border: 1px solid transparent;
+    gap: 30px;
+}
+
 .activites h2 {
     width: 100%;
     height: 30px;
 }
-#activites {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
 
 .activites ul {
-    display: flex;
-    flex-direction: row;
+    display:flex;
     gap: 30px;
-    border: 1px solid transparent;
+    padding-bottom: 30px;
 }
 
 .activites li {
     display: flex;
     width: calc((100% - 90px) / 4);
     height: 439px;
-    border-radius: 20px;
-    box-shadow: 0 3 0 15px rgba(0, 0, 0, 0.1);
     padding-bottom: 30px;
 }
 
@@ -347,14 +354,22 @@ i.fa-solid.fa-info {
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
+
+.activites figure{
+    width: 100%;
+    height: 439px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
   
-  .activites figcaption {
+.activites figcaption {
     display: flex;
-    text-align: center;
     font-size: 1rem;
     font-weight: bold;
-    padding: 20px 0px 20px 10px ;
-  }
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
 
 /* Footer */
 
