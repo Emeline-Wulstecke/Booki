@@ -106,18 +106,17 @@ nav img {
 nav ul {
     display: flex;
     padding-top: 10px;
-    border-top: 2px solid transparent;
+    gap: 60px;
 }
 
 nav a {
     margin-left: 25px;
-    padding-top: 10px;
     border-top: 2px solid transparent;
 }
 
 nav a:hover {
     color: var(--main-color);
-    border-top: 2px solid var(--main-color);
+    border-color: var(--main-color);
 }
 /****** End Nav Bar ******/
 
@@ -187,6 +186,7 @@ button {
 
 .filters li:hover {
   background-color: var(--filter-bg-color);
+  cursor: pointer;
 }
 
 .filters i.fa-solid {
@@ -257,6 +257,7 @@ i.fa-solid.fa-info {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    padding: 5px;
 }
 
 .herbegments-cards .card-title {
@@ -277,6 +278,11 @@ i.fa-solid.fa-info {
     font-weight: bold;
     padding-top: 30PX;
 }
+
+.more:hover {
+    cursor: pointer;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -324,28 +330,22 @@ i.fa-solid.fa-info {
 
 /*********** Activités *************/
 .activites {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 20px;
-    box-sizing: border-box;
-    margin-bottom: 35px; 
-    margin-top: 30px;
-}
-
-.activites h2 {
-    width: 100%;
-    height: 30px;
+    gap: 30px;
+    padding: 30px;
 }
 
 .activites ul {
-    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    box-sizing: border-box;
-    padding-bottom: 30PX;
+    width: 100%;
+}
+.activites figure {
+    width: 100%;
+    height: 439px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .activites li {
@@ -354,41 +354,36 @@ i.fa-solid.fa-info {
 
 .activites img{
     width: 100%;
-    height: 85%;
+    height: 380px;
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
 }
 
-.activites figure{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
- 
 .activites figcaption {
-    height: 15%;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     font-weight: bold;
+    padding: 19px;
 }
 
 /* Footer */
 footer {
+    width: 100%;
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-around;
     background-color: var(--main-bg-color);
+    margin-top: 35px;
+}
+
+footer section {
+    width: 100px;
+    padding: 20px;
+    margin-right: 21vw;
+     white-space: nowrap;
 }
 
 footer ul {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
-    padding-bottom: 20px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -401,14 +396,11 @@ footer ul {
         display:flex;
         flex-direction: column;
         align-items: flex-start;
-        font-size: 13px;
     }
 
     .filters ul {
         display:flex;
         flex-wrap: wrap;
-        margin-top: -15px;
-        margin-bottom: 15px;
     }
 
     /**** HERBERGEMENTS ****/
@@ -443,10 +435,19 @@ footer ul {
         font-size: 13px;
     }
 
-    /**** ACTIVITES ***/
-
-    .activites li {
+    /**** ACTIVITES ***/        
+    .activites figure {
         height: 290px;
+    }
+    .activites img {
+        height: 220px;
+    }
+    
+    /**** FOOTER ***/        
+    footer section {
+        padding-left: 20px;
+        margin-right: 19vw;
+        white-space: nowrap;
     }
 }
 
@@ -456,43 +457,45 @@ footer ul {
         padding: 0;
     }
     /**** HEADER + NAV ****/
-    header {
-        padding: 20px;
+    header > *:not(nav) {
+      margin-left: 20px;
     }
-
+    
     nav {
         display: flex;
         flex-direction: column;
         padding-top: 0;
     }
-    
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-top: none;
+        box-sizing: border-box;
+        border-bottom: 2px solid transparent;
+    }
+
     nav img { 
         padding: 30px;
     }
 
     nav ul {
-        display: flex;
-        align-items: center;
+        width: 100%;
     }
 
     nav li {
-        width: 200px;
-        text-align: center
-    }
-
-    nav a:hover {
-        border-top: none;
+        width: 50%;
+        text-align: center;
+        gap:0;
     }
 
     nav li:hover {
         color: var(--main-color);
-        border-bottom: 2px solid var(--main-color);
-        padding-bottom: 15px;
+        border-bottom: var(--main-color);
     }
     /**** Search bar ****/
     form { 
-        justify-content: flex-start;
-        width: 100%;
+        width: 85%;
     }
     input {
         width: 100%;
@@ -512,16 +515,17 @@ footer ul {
     }
 
     /**** filter bar ****/
-    .filters {
-        font-size: 13px;
+    .filters ul {
+        width: 100%;
     }
 
     .filters li {
         display: flex;
         justify-content: center;
+        width: 35%;
         height: 50px;
         padding: 4px 19px;
-        flex: 1 0 
+        white-space: nowrap;
     }
 
     /**** Hebergements And Populaires ****/
@@ -591,34 +595,30 @@ footer ul {
     }
 
     /**** Activités ****/  
-    .activites {
-        margin-top: 0;
-        padding: 30px;
-    }  
-
     .activites ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px
+        gap: 15px;
     }
-
+    
     .activites li {
-        height: 160px;
         width: 100%;
     }
 
     .activites figure {
-        padding-bottom: 20px;
+        height: 200px;
     }
 
+    .activites img {
+        height: 141px;
+    }
+    
     /**** Footer ****/ 
     footer {
         display: flex;
         flex-direction: column;
-        height: auto;
         width: 100%;
-        gap: 20px;
         padding: 30px;
     }
 
