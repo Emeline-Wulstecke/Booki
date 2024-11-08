@@ -112,7 +112,7 @@ nav ul {
 nav a {
     margin-left: 25px;
     border-top: 2px solid transparent;
-    padding-top: 10px;
+    padding-top: 18px;
 }
 
 nav a:hover {
@@ -208,8 +208,8 @@ p {
     height: 24px;
     align-items: center;
     gap: 10px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 i.fa-solid.fa-info {
